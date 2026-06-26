@@ -41,6 +41,10 @@ public class MainGuardia {
 
                         System.out.println("Prioridad (1: Emergencia, 2: Urgente, 3: Consulta): ");
                         int prioridad = sc.nextInt();
+                        if (prioridad < 1 || prioridad > 3) {
+                            System.out.println("ERROR: Se ingresó una opción no valida");
+                            break;
+                        }
 
                         hospital.ingresarPaciente(dni, prioridad);
                         nombres.agregar(dni, nombre);
