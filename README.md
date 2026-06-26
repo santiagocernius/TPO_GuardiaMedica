@@ -85,7 +85,7 @@ Gracias al uso de **estructuras dinámicas**, el sistema escala eficientemente e
 
 Aunque mencionamos que los Árboles AVL son el siguiente paso para la *escalabilidad*, no los incluimos en esta versión por las siguientes razones técnicas:
 
-1.  *Complejidad vs. Necesidad:* Los AVL garantizan un costo de búsqueda de *$O(\log n)$* gracias a su auto-balanceo. Sin embargo, para el volumen de datos de una guardia hospitalaria típica, el costo lineal *$O(n)$* de nuestras listas dinámicas es aceptable y mucho más simple de implementar y mantener.
+1.  *Complejidad vs. Necesidad:* Los AVL garantizan un costo de búsqueda de **$O(\log n)$** gracias a su auto-balanceo. Sin embargo, para el volumen de datos de una guardia hospitalaria típica, el costo lineal **$O(n)$** de nuestras listas dinámicas es aceptable y mucho más simple de implementar y mantener.
 2.  *Overhead de Implementación:* Un árbol AVL requiere una lógica mucho más pesada, incluyendo el cálculo de *factores de balance* y la ejecución de *rotaciones (simples y dobles)* cada vez que se inserta o elimina un elemento. Esto añade una carga de procesamiento extra que solo se justifica si tenemos millones de registros.
 3.  *Memoria:* Cada nodo de un AVL debe guardar información adicional (como su altura o factor de balance), lo que aumenta el consumo de memoria por cada paciente registrado.
 4.  *Criterio del Arquitecto:* Según la *"Regla de Oro"* de la materia, no existe la estructura perfecta, sino la óptima para el requerimiento del negocio. Para este TPO, priorizamos la claridad en el uso de los *4 Pilares* y los TDAs básicos antes que una optimización prematura con estructuras de búsqueda avanzada.
